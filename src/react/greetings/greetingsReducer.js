@@ -1,5 +1,5 @@
-const GET_DATA = "src/redux/GET_DATA";
-const URL = "http://localhost:3000/api/v1/greetings";
+const GET_DATA = 'src/redux/GET_DATA';
+const URL = 'http://localhost:3000/api/v1/greetings';
 
 export const getData = (payload) => ({
   type: GET_DATA,

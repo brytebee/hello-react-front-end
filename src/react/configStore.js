@@ -1,7 +1,7 @@
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import logger from "redux-logger";
-import thunk from "redux-thunk";
-import greetReducer from "./greetings/greetingsReducer";
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import greetReducer from './greetings/greetingsReducer';
 
 const reducer = combineReducers({
   greetRed: greetReducer,
