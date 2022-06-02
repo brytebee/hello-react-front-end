@@ -6,7 +6,7 @@ import {
 } from "../react/greetings/greetingsReducer";
 
 const Greetings = () => {
-  const data = useSelector((state) => state.greetRed);
+  const allGreetings = useSelector((state) => state.greetRed);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,6 +16,14 @@ const Greetings = () => {
   return (
     <div>
       <h1>Greetings</h1>
+      {allGreetings.map((greeting) => {
+        return (
+          <div key={greeting.id}>
+            <h4>{greeting.title}</h4>
+            <p>{greeting.message}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };
