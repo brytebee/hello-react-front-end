@@ -13,7 +13,7 @@ export const getDataFromAPI = async () => (dispatch) => {
   dispatch(getData(data))
 };
 
-const reducer = (state = [], action) => {
+const greetReducer = (state = [], action) => {
   switch (action.type) {
     case GET_DATA:
       return action.payload;
@@ -22,4 +22,4 @@ const reducer = (state = [], action) => {
   }
 }
 
-export default reducer;
+export default greetReducer;
