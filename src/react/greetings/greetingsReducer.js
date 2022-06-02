@@ -6,11 +6,11 @@ export const getData = (payload) => ({
   payload,
 });
 
-export const getDataFromAPI = async () => (dispatch) => {
+export const getDataFromAPI = () => async (dispatch) => {
   const req = await fetch(URL);
   const res = await req.json();
   const data = res.data;
-  dispatch(getData(data))
+  dispatch(getData(data));
 };
 
 const greetReducer = (state = [], action) => {
@@ -20,6 +20,6 @@ const greetReducer = (state = [], action) => {
     default:
       return state;
   }
-}
+};
 
 export default greetReducer;
