@@ -9,8 +9,7 @@ export const getData = (payload) => ({
 export const getDataFromAPI = () => async (dispatch) => {
   const req = await fetch(URL);
   const res = await req.json();
-  const data = res.data;
-  dispatch(getData(data));
+  dispatch(getData(res));
 };
 
 const greetReducer = (state = [], action) => {
