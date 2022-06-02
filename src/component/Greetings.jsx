@@ -1,8 +1,15 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getDataFromAPI } from "../react/greetings/greetingsReducer";
 
 const Greetings = () => {
-  const data = useSelector((store) => store.greetRed);
+  const data = useSelector((state) => state.greetRed);
+  const dispatch = useDispatch;
+
+  useEffect(() => {
+    dispatch(getDataFromAPI());
+  }, []);
+
   console.log(data);
   return (
     <div>
